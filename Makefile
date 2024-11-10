@@ -6,6 +6,6 @@ test_ColoredBitmap:
 	cd config/; gcc  mainColoredBitmap.c assert_with_message.c ../ColoredBitmap.c -o ../result
 	./result
 
-test_grayScaleImage: 
+test_video: 
 	cd config/; gcc  mainvideo.c assert_with_message.c ../video.c -o ../result
 	./result

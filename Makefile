@@ -1,6 +1,11 @@
-test1: 
-	gcc CalculateImageSize.c -o Init/exo1.out
-	(cd Init/; bash CalculateImageSize.sh)
-test2:	
-	gcc CalculateVideo.c -o Init/exo2.out
-	(cd Init/; bash CalculateVideoSize.sh)
+test_grayScaleImage: 
+	cd config/; gcc  mainGrayScaleImage.c assert_with_message.c ../GrayScaleImage.c -o ../result
+	./result
+
+test_ColoredBitmap: 
+	cd config/; gcc  mainColoredBitmap.c assert_with_message.c ../ColoredBitmap.c -o ../result
+	./result
+
+test_grayScaleImage: 
+	cd config/; gcc  mainvideo.c assert_with_message.c ../video.c -o ../result
+	./result
